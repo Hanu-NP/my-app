@@ -1,9 +1,3 @@
-def sayHello(String name = 'human') {
-echo "Hello, ${Name}."
-echo "Hello, ${Name}."
-}
-
-
 pipeline {
     agent {label 'maven-label'}
 
