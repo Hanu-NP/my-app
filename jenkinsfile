@@ -1,3 +1,8 @@
+def sayhello(String name = 'human') {
+  echo "Hello, ${name}."
+  echo "Hello, ${name}."
+}
+
 pipeline {
     agent {label 'maven-label'}
 
@@ -9,6 +14,7 @@ pipeline {
         stage('Build') {
             steps {
                 cleanWs()
+                sayhello "Hanumanth" 
                 git 'https://github.com/Hanu-NP/my-app.git'
                 sh "mvn -Dmaven.test.failure.ignore=true clean package"
               // bat "mvn -Dmaven.test.failure.ignore=true clean package"
